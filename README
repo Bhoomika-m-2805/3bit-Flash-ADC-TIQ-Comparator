@@ -1,0 +1,95 @@
+# 3-Bit Flash ADC using TIQ Comparator (90nm CMOS)
+
+## Overview
+This project presents the design and implementation of a 3-bit Flash Analog-to-Digital Converter (ADC) using Threshold Inverter Quantization (TIQ) comparators in 90nm CMOS technology. The design focuses on achieving low power consumption, high speed, and reduced circuit complexity.
+
+The system was designed and simulated using Cadence Virtuoso.
+
+---
+
+## Features
+- 3-bit Flash ADC design
+- Uses TIQ comparators instead of traditional comparators
+- Eliminates resistor ladder network
+- Low power consumption: 300 µW
+- High speed operation: 40 µs delay
+- Implemented using 90nm CMOS technology
+- Designed using Cadence Virtuoso
+
+---
+
+## Working Principle
+
+The Flash ADC consists of:
+
+### 1. TIQ Comparators
+- Total comparators: 7
+- Each comparator has different threshold voltage
+- Threshold range: 0.2V to 0.8V
+- Implemented using CMOS inverter
+
+Each comparator produces:
+- Logic 1 → if Vin > Threshold
+- Logic 0 → if Vin < Threshold
+
+This generates a thermometer code.
+
+### 2. Priority Encoder
+The priority encoder converts thermometer code into binary output.
+
+Example:
+
+Thermometer code: 1110000  
+Binary output: 100
+
+---
+
+## Block Diagram
+
+Analog Input → TIQ Comparators → Priority Encoder → Digital Output
+
+---
+
+## Tools Used
+
+- Cadence Virtuoso
+- 90nm CMOS Technology
+- Analog and Digital CMOS Design
+
+---
+
+## Results
+
+| Parameter | Value |
+|---------|------|
+| Resolution | 3 bit |
+| Number of comparators | 7 |
+| Power consumption | 300 µW |
+| Delay | 40 µs |
+| Input signal | 1V sine wave |
+
+---
+
+## Applications
+
+- Mixed signal circuits
+- Communication systems
+- Biomedical devices
+- Low power IoT systems
+
+---
+
+## Advantages
+
+- Low power consumption
+- High speed conversion
+- No resistor ladder required
+- Reduced chip area
+
+---
+
+## Author
+
+Bhoomika M  
+Electronics and Communication Engineering  
+JSS Science and Technology University  
